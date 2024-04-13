@@ -93,9 +93,8 @@ class MainActivity : AppCompatActivity() , TextWatcher, TextToSpeech.OnInitListe
         }
         if(ttsSucess) {
             val textSpeak = textResult.text.toString()
-            if(textSpeak != null){
-                tts.speak(textSpeak, TextToSpeech.QUEUE_FLUSH, null)
-            }
+            tts.speak(textSpeak, TextToSpeech.QUEUE_FLUSH, null)
+
 
             //Log.d ("PDM23", tts.language.toString())
             //tts.speak("Oi Sumido", TextToSpeech.QUEUE_FLUSH, null, null)
