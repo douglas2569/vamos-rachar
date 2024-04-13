@@ -20,13 +20,16 @@ class MainActivity : AppCompatActivity() , TextWatcher, TextToSpeech.OnInitListe
     private lateinit var edtNumPessoas: EditText
     private lateinit var textResult: TextView
 
-    val btnTalk: FloatingActionButton = findViewById(R.id.button_talk)
-    val btnShare: FloatingActionButton = findViewById(R.id.button_share)
+    private lateinit var  btnTalk: FloatingActionButton
+    private lateinit var  btnShare: FloatingActionButton
 
     private var ttsSucess: Boolean = false;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        btnTalk = findViewById(R.id.button_talk)
+        btnShare = findViewById(R.id.button_share)
+
         edtConta = findViewById<EditText>(R.id.edit_conta)
         edtConta.addTextChangedListener(this)
 
@@ -95,9 +98,6 @@ class MainActivity : AppCompatActivity() , TextWatcher, TextToSpeech.OnInitListe
             val textSpeak = textResult.text.toString()
             tts.speak(textSpeak, TextToSpeech.QUEUE_FLUSH, null)
 
-
-            //Log.d ("PDM23", tts.language.toString())
-            //tts.speak("Oi Sumido", TextToSpeech.QUEUE_FLUSH, null, null)
         }
     }
 
