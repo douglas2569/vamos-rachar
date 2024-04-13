@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() , TextWatcher, TextToSpeech.OnInitListe
                 value = 0.0
             }
 
-           textResult.text = calResult(value, people).toString()
+           textResult.text = "R$ ${calResult(value, people).toString()}"
             Log.d("PDM24", "p: " + people)
             Log.d("PDM24", "v: " + value)
         //    edtConta.setText("9")
