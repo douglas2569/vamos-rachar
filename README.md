@@ -1,4 +1,4 @@
-#AT02 - Vamos Rachar
+# AT02 - Vamos Rachar
 
 Você deve fazer um aplicativo que facilite a vida de quem vai dividir a conta no restaurante com os amigos. Ele pode ter apenas uma única tela conforme mostrado no final do vídeo da aula gravada- Parte 2.
 
