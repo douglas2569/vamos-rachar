@@ -76,7 +76,9 @@ class MainActivity : AppCompatActivity() , TextWatcher, TextToSpeech.OnInitListe
                 value = 0.0
             }
 
-           textResult.text = "R$ ${calResult(value, people).toString()}"
+            textResult.text = "R$ ${calResult(value, people)}"
+
+
             Log.d("PDM24", "p: " + people)
             Log.d("PDM24", "v: " + value)
         //    edtConta.setText("9")
@@ -140,6 +142,7 @@ class MainActivity : AppCompatActivity() , TextWatcher, TextToSpeech.OnInitListe
 
         if (value != null && value != 0.0 && people != null && people != 0) {
             result = (value / people)
+            result = String.format(Locale.US, "%.2f", result).toDouble()
         }
 
         return result
